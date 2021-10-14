@@ -88,7 +88,7 @@ function Register(props) {
                </label>
                <input
                   className="input1"
-                  type="text"
+                  type="number"
                   placeholder="Enter your ID"
                   name="uid"
                   value={uid}
@@ -106,7 +106,7 @@ function Register(props) {
                   onChange={handleChangeInput}
                />
                <label className="label1" htmlFor="email">
-                  Email
+                  Email or Number
                </label>
                <input
                   className="input1"
