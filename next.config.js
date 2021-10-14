@@ -7,7 +7,7 @@ module.exports = {
       ],
    },
    env: {
-      BASE_URL: "http://topupstore.vercel.app/",
+      BASE_URL: "http://topupstore.vercel.app",
       MONGODB_URL:
          "mongodb+srv://jaseem:jarvis008@cluster0.lqcju.mongodb.net/topupstore?retryWrites=true&w=majority",
       ACCESS_TOKEN_SECRET: "j76jxfmddJ/P:D[ZbhN-)hgG<bQBY,2SNS#7FFGu.<Ud>[':F7",
