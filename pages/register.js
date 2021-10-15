@@ -37,7 +37,6 @@ function Register(props) {
    };
 
    const handleSubmit = async (e) => {
-      console.log(userData);
       e.preventDefault();
       const errMsg = valid(uid, name, email, password, cf_password);
       if (errMsg)

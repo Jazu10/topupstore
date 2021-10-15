@@ -1,5 +1,4 @@
 const valid = (uid, name, email, password, cf_password) => {
-   console.log(password, cf_password);
    if (!name || !email || !uid || !password)
       return "Please enter all the fields!";
 
