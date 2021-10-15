@@ -13,7 +13,7 @@ export default async (req, res) => {
 
 const getUsers = async (req, res) => {
    try {
-      const users = await Users.find().sort({ createdAt: 1 });
+      const users = await Users.find().sort({ createdAt: -1 });
       res.json({ status: "success", result: users.length, users });
    } catch (err) {
       return res.status(500).json({ err: err.message });
