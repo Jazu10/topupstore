@@ -4,6 +4,7 @@ const valid = (uid, name, email, password, cf_password) => {
 
    // if (!validateEmail(email)) return "Invalid Email format!";
    if (uid.length !== 9) return "Invalid Freefire id";
+   if (name.length > 3 && name.length < 0) return "Invalid level";
 
    if (password.length < 6) return "Password must be atleast of 6 characters!";
 

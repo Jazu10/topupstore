@@ -121,7 +121,7 @@ function Register(props) {
                   </label>
                   <input
                      className="input1"
-                     type="text"
+                     type="number"
                      placeholder="Enter your level"
                      name="name"
                      value={name}

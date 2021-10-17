@@ -7,7 +7,7 @@ function User({ uid, name, email, password, classe, role }) {
                   Platform: {classe}
                </p>
                <p className="text-md my-2 bg-transparent">ID: {uid}</p>
-               <p className="text-md my-2 bg-transparent">Name: {name}</p>
+               <p className="text-md my-2 bg-transparent">Level: {name}</p>
                <p className="text-md my-2 bg-transparent">Email: {email}</p>
                <p className="text-md my-2 bg-transparent">
                   Password: {password}
