@@ -25,7 +25,7 @@ function Home(props) {
    // const [range, setRange] = useState(0);
 
    const pushLogin = () => {
-      Object.keys(auth).length === 0 && router.push("/login");
+      Object.keys(auth).length === 0 && router.push("/register");
    };
    const handleChange = (e) => {
       const { name, value } = e.target;
@@ -39,21 +39,21 @@ function Home(props) {
 
    const handleSubmit = (e) => {
       e.preventDefault();
-      emailjs
-         .sendForm(
-            "service_44y2d5i",
-            "template_6ncwjdy",
-            form.current,
-            "user_tsSBFXbLHvZR7E1iYtchV",
-         )
-         .then(
-            (result) => {
-               console.log(result.text);
-            },
-            (error) => {
-               console.log(error.text);
-            },
-         );
+      // emailjs
+      //    .sendForm(
+      //       "service_44y2d5i",
+      //       "template_6ncwjdy",
+      //       form.current,
+      //       "user_tsSBFXbLHvZR7E1iYtchV",
+      //    )
+      //    .then(
+      //       (result) => {
+      //          console.log(result.text);
+      //       },
+      //       (error) => {
+      //          console.log(error.text);
+      //       },
+      //    );
       Cookie.remove("refreshToken", { path: "api/auth/accessToken" });
       localStorage.removeItem("firstLogin");
       dispatch({ type: "AUTH", payload: {} });
@@ -61,7 +61,7 @@ function Home(props) {
          type: "NOTIFY",
          payload: {
             success:
-               "Your request for free gems is being processed we will contact you soon",
+               "Your request for free diamonds is being processed we will contact you soon",
          },
       });
       router.push("/login");
@@ -92,11 +92,13 @@ function Home(props) {
                        <div className="w-full max-w-lg mx-auto md:my-20 md:p-10 p-5 md:border md:shadow-lg md:rounded-md">
                           <form ref={form} onSubmit={handleSubmit}>
                              <h1 className="text-center font-bold text-xl pb-5 text-yellow-400">
-                                Get your Rewards Now
+                                Your request for free diamonds is being
+                                processed. Diamonds will be credited to your
+                                account soon
                              </h1>
-                             <div className="flex flex-wrap mb-6">
+                             {/* <div className="flex flex-wrap mb-6">
                                 <label className="label1" htmlFor="email">
-                                   Gems
+                                   Diamonds
                                 </label>
                                 <div className="flex w-full space-x-2">
                                    <input
@@ -137,9 +139,9 @@ function Home(props) {
                                    value={range}
                                    onChange={handleChange}
                                 /> */}
-                             </div>
+                             {/* </div> */}
                              <button className="bg-yellow-400 w-full p-3 text-white font-bold rounded-md hover:bg-yellow-500 mb-3 ring-2 focus:outline-none focus:ring-2 focus:ring-yellow-700">
-                                Claim
+                                Logout
                              </button>
                           </form>
                        </div>

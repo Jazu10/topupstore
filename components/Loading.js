@@ -14,7 +14,7 @@ function Loading() {
                   </div>
                </div>
             </div>
-            <div className="md:hidden z-40">
+            <div className="md:hidden z-50 h-full">
                <div className="animate-pulse flex space-x-4">
                   <div className="rounded-full bg-yellow-400 h-12 w-12"></div>
                   <div className="flex-1 space-y-4 py-1">
